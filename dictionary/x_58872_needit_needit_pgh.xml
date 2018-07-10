@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="task" label="NeedIt_pgh" max_length="40" name="x_58872_needit_needit_pgh" sizeclass="3" type="collection">
+    <element audit="true" extends="task" label="NeedIt_pgh" max_length="40" name="x_58872_needit_needit_pgh" sizeclass="7" type="collection">
         <element label="A pgh field" max_length="40" name="a_pgh_field" type="integer"/>
         <element label="New field pgh" max_length="32" name="new_field_pgh" type="decimal"/>
-        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="x_58872_needit_needit_pgh" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+        <element attributes="edge_encryption_enabled=true" label="Otherrr" max_length="40" name="u_other" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="otro" max_length="40" name="u_otro" type="string"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
             <choice>
                 <element label="Huma Resources" sequence="0" value="hr"/>
                 <element label="Facilities" sequence="1" value="facilities"/>
@@ -12,7 +14,7 @@
                 <element label="Your Departament Choice" sequence="3" value="your_choice"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" choice="1" default="legal1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
             <choice>
                 <element label="Human Resources 1" sequence="0" value="hr1"/>
                 <element label="Human Resources 2" sequence="1" value="hr2"/>
